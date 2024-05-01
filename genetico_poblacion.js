@@ -8,7 +8,6 @@ parentPort.on('message', (data) => {
         let mejor;
         for (let i=1; i<=data.ITERACIONES ; i++) {
             const routeNodes = CityUtils.crearSolucion(data.cityDistances);
-            routeCost = CityUtils.calculateTotalDistance(routeNodes, data.cityDistances);
             const auxMejor = TspUtils.findOptimalSolution(routeNodes, mejor, data.nodesCandidates, data.cityDistances);
             if (!mejor || auxMejor.routeCost < mejor.routeCost) {
                 mejor = auxMejor;
