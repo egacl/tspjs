@@ -1,7 +1,7 @@
 
 const CityUtils = require('./city.util');
 
-const SOLUTION_MULTIPLIER = 1;
+const SOLUTION_MULTIPLIER = 8;
 
 const calculateNodesCost = (nodeA, nodeB, cityDistances) => {
     return cityDistances[nodeA.id][nodeB.id];

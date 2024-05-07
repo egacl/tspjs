@@ -9,8 +9,8 @@ const CANDIDATES_LENGTH = 25;
 const ITERACIONES = 100;
 
 (async () => {
-    // cityDistances = CityUtils.readJsonFile('berlin52.json');
-    cityDistances = CityUtils.readJsonFile('att532.dat', false);
+    cityDistances = CityUtils.readJsonFile('berlin52.json');
+    // cityDistances = CityUtils.readJsonFile('att532.dat', false);
     // cityDistances = CityUtils.readJsonFile('10.json');
     const nodesCandidates = CityUtils.computeCandidates(cityDistances, CANDIDATES_LENGTH);
     console.time("totalCost");
