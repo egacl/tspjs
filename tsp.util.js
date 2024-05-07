@@ -1,6 +1,8 @@
 
 const CityUtils = require('./city.util');
 
+const SOLUTION_MULTIPLIER = 1;
+
 const calculateNodesCost = (nodeA, nodeB, cityDistances) => {
     return cityDistances[nodeA.id][nodeB.id];
 }
@@ -127,7 +129,8 @@ const findOptimalSolution = (routeNodes, mejor, nodesCandidates, cityDistances) 
     let t0;
     let t1;
     let cont = 0;
-    while (cont < 8*cityDistances.length) {
+    const iterations = SOLUTION_MULTIPLIER * cityDistances.length;
+    while (cont < iterations) {
         t0 = CityUtils.getRandomNode(routeNodes);
         t1 = t0.sig;
         if (mejor) {

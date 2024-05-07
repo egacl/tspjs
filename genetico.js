@@ -37,9 +37,9 @@ const encontrarMenorYMayor = (arr) => {
 }
 
 const CANDIDATES_LENGTH = 25;
-const ITERACIONES = 10;
-const CANTIDAD_POBLACION = 100;
-const CHUNK_PARALLEL_CREAR_POBLACION = 10; // para que se haga en 1 hebra, debe ir en 100
+const ITERACIONES = 3;
+const CANTIDAD_POBLACION = 200;
+const CHUNK_PARALLEL_CREAR_POBLACION = 100; // para que se haga en 1 hebra, debe ir en 100
 
 (async () => {
     cityDistances = CityUtils.readJsonFile('att532.dat', false);
