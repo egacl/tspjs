@@ -8,7 +8,9 @@ const callWorker = (data, workerInstance) => {
                 reject(new Error(`Worker stopped with exit code ${code}`));
             }
         });
-        workerInstance.postMessage(data);
+        if (data) {
+            workerInstance.postMessage(data);
+        }
     });
 }
 
